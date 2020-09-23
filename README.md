@@ -6,3 +6,6 @@ Main File Directory
 **Cole Williams** Morning Section  
 
 This Program will take audio from an input device and turn it into a wav file
+### Meeting Times ###
+Tuesday  3:00 PM\
+Thursday 3:00 PM\
