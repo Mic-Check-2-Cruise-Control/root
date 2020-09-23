@@ -3,7 +3,7 @@
 - **Hunter Hutchison** Group 4 Morning section (Maintainer, hunterhutch98)  
 - **Brendan Madigan** Morning Section (Developer, brendanmadigan)  
 - **Evan Ross** Morning Section (Developer, evanross33)  
-- **Cole Williams** Morning Section (Developer, )  
+- **Cole Williams** Morning Section (Developer, Colew1498)  
 
 ## Issues  
 
