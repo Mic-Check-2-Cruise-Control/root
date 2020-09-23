@@ -1,7 +1,7 @@
 # root
 Main File Directory
 Hunter Hutchison Group 4 Morning section (Maintaner, hunterhutch98)
-Brendan Madigan Morning Section
+Brendan Madigan Morning Section (Developer, brendanmadigan)
 Evan Ross Morning Section (evanross33)
 Cole Williams Morning Section
 
