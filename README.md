@@ -1,9 +1,9 @@
 # Mic Check 2: Cruise Control
 ## Members  
-- Hunter Hutchison Group 4 Morning section (Maintainer, hunterhutch98)  
-- Brendan Madigan Morning Section (Developer, brendanmadigan)  
-- Evan Ross Morning Section (Developer, evanross33)  
-- Cole Williams Morning Section (Developer, )  
+- **Hunter Hutchison** Group 4 Morning section (Maintainer, hunterhutch98)  
+- **Brendan Madigan** Morning Section (Developer, brendanmadigan)  
+- **Evan Ross** Morning Section (Developer, evanross33)  
+- **Cole Williams** Morning Section (Developer, )  
 
 ## Issues  
 
