@@ -31,7 +31,7 @@ dur = 10
 sg.theme('DarkAmber')
 layout = [[sg.Text("Audio Recording Application")], 
                             [sg.Text(" ")],
-                            [sg.Button("Play"), sg.InputText(filename), sg.FolderBrowse()],
+                            [sg.Button("Play"), sg.InputText(filename), sg.FileBrowse()],
                             [sg.Text(" ")],
                             [sg.Button("Record")],
                             [sg.Text(" ")],
@@ -66,12 +66,12 @@ while True:
 
     if event == "Play" :
         # Play Recording 
+        filename = values[0]
         data, fs = sf.read(filename,dtype = 'float32')
         # Import file with frequency sampling
         sd.play(data,fs)
         sg.PopupTimed("PLAYING",auto_close_duration = 10)
-        status = sd.wait()
-        # wait for end of recording 
+        #No wait so user can close program if need be
     
     if event == sg.WIN_CLOSED :
         break
