@@ -18,11 +18,13 @@ import PySimpleGUI as sg
 sg.theme('DarkAmber')
 layout = [[sg.Text("Audio Recording Application")], 
                             [sg.Text(" ")],
-                            [sg.Button("Play")],
+                            [sg.Button("Play"), sg.InputText("output.wav"), sg.FolderBrowse()],
                             [sg.Text(" ")],
                             [sg.Button("Record")],
                             [sg.Text(" ")],
-                            [sg.Text("Recording Duration"), sg.InputText()]]
+                            [sg.Text("Recording Duration"), sg.InputText()],
+                            [sg.Text("File Name + \".wav\""), sg.InputText()],
+                            [sg.Text("Save to"), sg.InputText(), sg.FolderBrowse()]]
 
 # Create the window
 window = sg.Window("Mic Check 2", layout)
