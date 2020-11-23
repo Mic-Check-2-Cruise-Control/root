@@ -1,5 +1,6 @@
 import sounddevice as sd
 from scipy.io.wavfile import write
+from scipy.io.wavfile import read
 import soundfile as sf
 
 import argparse
@@ -12,6 +13,8 @@ from tkinter.ttk import Combobox
 
 import tkinter as tk
 import PySimpleGUI as sg
+
+import matplotlib.pyplot as plt
 
 import os
 
@@ -68,11 +71,33 @@ while True:
         # Play Recording 
         filename = values[0]
         data, fs = sf.read(filename,dtype = 'float32')
+        
+        #This code will create a checkbox to ask the user if they want to make a graph
+        #master = Tk()
+        #isGraph = IntVar()
+        #Checkbutton(master, text="Show the Wav graph?", variable = isGraph).grid(row=0, sticky=W)
+        #
+        
         # Import file with frequency sampling
         sd.play(data,fs)
         sg.PopupTimed("PLAYING",auto_close_duration = 10)
+        
         #No wait so user can close program if need be
-    
+        
+        #Matplot
+        
+        #rate, graphData = read(filename)
+        #Setup title
+        #plt.title("Your WAV File")
+
+        #plt.xlabel("Time")
+        #plt.ylabel("Amplitude")
+        #plt.plot(graphData)
+        #plt.show()
+        #next two lines are untested
+        #wait()
+        #plt.close('all')
+        
     if event == sg.WIN_CLOSED :
         break
 
