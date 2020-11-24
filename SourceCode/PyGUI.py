@@ -15,6 +15,18 @@ import matplotlib.pyplot as plt
 import soundfile as sf
 import sounddevice as sd
 
+def getLayout():
+    sg.theme('DarkAmber')
+    layout = [[sg.Text("Audio Recording Application")],
+              [sg.Text(" ")],
+              [sg.Button("Play"), sg.InputText(filename), sg.FileBrowse()],
+              [sg.Text(" ")],
+              [sg.Button("Record")],
+              [sg.Text(" ")],
+              [sg.Text("Recording Duration"), sg.InputText(dur)],
+              [sg.Text("File Name + \".wav\""), sg.InputText(output)],
+              [sg.Text("Save to"), sg.InputText(directory), sg.FolderBrowse()]]
+    return layout
 
 # Get current Directory
 directory = os.getcwd()
@@ -30,17 +42,7 @@ dur = 10
 
 
 # Generate desired elements of the window
-sg.theme('DarkAmber')
-layout = [[sg.Text("Audio Recording Application")],
-          [sg.Text(" ")],
-          [sg.Button("Play"), sg.InputText(filename), sg.FileBrowse()],
-          [sg.Text(" ")],
-          [sg.Button("Record")],
-          [sg.Text(" ")],
-          [sg.Text("Recording Duration"), sg.InputText(dur)],
-          [sg.Text("File Name + \".wav\""), sg.InputText(output)],
-          [sg.Text("Save to"), sg.InputText(directory), sg.FolderBrowse()]]
-
+layout = getLayout()
 # Create the window
 window = sg.Window("Mic Check 2", layout)
 
