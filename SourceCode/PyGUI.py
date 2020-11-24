@@ -1,22 +1,19 @@
-import sounddevice as sd
-from scipy.io.wavfile import write
-from scipy.io.wavfile import read
-import soundfile as sf
+"""CS3560 Recording project
+Hunter Hutch, Cole Wilson, Brendan Madigan, Evan Ross, and Garrett Drumm"""
+import os
 
-import argparse
-import queue
-import sys
-
-from tkinter import *
-from builtins import *
 from tkinter.ttk import Combobox
 
 import tkinter as tk
+
+from scipy.io.wavfile import write
+from scipy.io.wavfile import read
+
 import PySimpleGUI as sg
 
 import matplotlib.pyplot as plt
-
-import os
+import soundfile as sf
+import sounddevice as sd
 
 
 # Get current Directory
@@ -64,7 +61,6 @@ while True:
         # sg.PopupTimed("RECORDING", auto_close_duration=second)
 
         # Setup title
-
         plt.title("Your WAV File")
         plt.xlabel("Time")
         plt.ylabel("Amplitude")
@@ -73,7 +69,6 @@ while True:
 
         # loop to get voice data in real time
         while i < duration:
-            pass
             plt.plot(record_voice)
             plt.pause(0.05)
             i = i + 1
@@ -111,9 +106,7 @@ while True:
         plt.ylabel("Amplitude")
         plt.plot(graphData)
         plt.show(block=False)
-        # next two lines are untested
-        # sd.wait()
-        # plt.close('all')
+
 
     if event == sg.WIN_CLOSED:
         break
