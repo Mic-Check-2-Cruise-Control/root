@@ -22,6 +22,7 @@ def getLayout():
               [sg.Button("Play"), sg.InputText(filename), sg.FileBrowse()],
               [sg.Text(" ")],
               [sg.Button("Record")],
+             #[sg.Checkbox('Plot Input', default=True, key="plot")],
               [sg.Text(" ")],
               [sg.Text("Recording Duration"), sg.InputText(dur)],
               [sg.Text("File Name + \".wav\""), sg.InputText(output)],
@@ -62,6 +63,8 @@ while True:
         record_voice = sd.rec(int(second * fs), samplerate=fs, channels=2)
         # sg.PopupTimed("RECORDING", auto_close_duration=second)
 
+        plt.close('all') #close any lingering plots before new plot
+        #if values["plot"] == True:
         # Setup title
         plt.title("Your WAV File")
         plt.xlabel("Time")
@@ -71,11 +74,12 @@ while True:
 
         # loop to get voice data in real time
         while i < duration:
-            plt.plot(record_voice)
+            plt.plot(record_voice, 'k-')
             plt.pause(0.05)
             i = i + 1
 
         # Display plot of amplitudes
+
         plt.show(block=False)
         sd.wait()
         plt.close('all')
@@ -98,6 +102,7 @@ while True:
 
         # No wait so user can close program if need be
 
+        plt.close('all') #close any lingering plots before new plot
         # Matplot
 
         rate, graphData = read(filename)
@@ -106,7 +111,7 @@ while True:
 
         plt.xlabel("Time")
         plt.ylabel("Amplitude")
-        plt.plot(graphData)
+        plt.plot(graphData, 'k-')
         plt.show(block=False)
 
 
