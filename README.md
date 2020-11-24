@@ -4,7 +4,8 @@
 - **Hunter Hutchison** Group 4 Morning section (Maintainer, hunterhutch98)  
 - **Brendan Madigan** Morning Section (Developer, brendanmadigan)  
 - **Evan Ross** Morning Section (Developer, evanross33)  
-- **Cole Williams** Morning Section (Developer, Colew1498)  
+- **Cole Williams** Morning Section (Developer, Colew1498)
+- **Garrett Drumm** Morning Section (Developer, garrettdrumm)
 This Program will take audio from an input device and turn it into a wav file
 
 ### Meeting Times
